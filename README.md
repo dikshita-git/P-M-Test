@@ -71,3 +71,18 @@ Temp=$(sensors)             #Listing the temperature of the system
 echo "Temperature of the system is: $Temp"
 
 ```
+
+It lists the system's CPU tempertaure:
+
+- ***dell_smm-isa-0000:*** CPU fan, which is managed by the system firmware.
+- ***acpitz-acpi-0:*** Temperature sensor near/on the CPU socket.
+- ***coretemp-isa-0000:***  Temperature of the specific cores.
+
+
+#### 6. Check the system's IP address
+
+```
+IP_address=$(ip -4 -o a | cut -d '' -f 2,7 | cut -d '/' -f 1)      #Showing IP address of system including network interfaces and IPV4 on the system
+echo "IP address and network interface of system: $IP_address"
+
+```
