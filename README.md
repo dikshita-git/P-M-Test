@@ -15,7 +15,8 @@ The config.vm.box would mean to configure the basic unit of vagrant setup called
 
 ## Your task is to create a bash script that automates the following tasks:
 
-Here is the <code><a href="https://github.com/dikshita-git/P-M-Test/blob/main/test.sh">bash script</a></code> with the codes and below is an explanation of the same
+Here is the <code><a href="https://github.com/dikshita-git/P-M-Test/blob/main/test.sh">bash script</a></code> with the codes and below is an explanation of the same. Further the logs of code executions are tracked in <code><a href="https://github.com/dikshita-git/P-M-Test/blob/main/log.out"></a>logfile</code>
 
 
 #### 2. Check the free disk space of the system
+
