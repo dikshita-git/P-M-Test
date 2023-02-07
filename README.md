@@ -27,9 +27,26 @@ echo -e "The disk space in system is: $Diskspace"
 This command means display free+used disk space in the linux system.With the flag --total, it displays name of filesystem, free, used etc. 
 
 
-#### 3. Check the system's uptime
+#### 3. Check the system's uptime and load average
+
+In general:
+
+***Uptime***: It is used to show for how long the system is up followed by the number of active users
+***Load average***: Depicts average load on a CPU of the system.
+
 
 ```
 Uptime=$(uptime)    #Display uptime and load average of system
 echo "The system uptime and its load average is: $Uptime"
 ```
+By using the "uptime" command, we see (from left to right):
+
+The system is up for 20:07:20 up  1:25 and for 1 user with the load averages:
+- 0,02: It is the average load on the CPU of system for the last minute.
+- 0,15: It is the average load on the CPU of system for the last 5-minutes interval time.
+- 0,43: It is the 15-minutes average load on the CPU of system.
+
+These help us to understand how the undergoing processes are using the CPU over the time.
+
+
+#### 4. Check the number of active connections to the system
