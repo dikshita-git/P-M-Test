@@ -53,12 +53,21 @@ These help us to understand how the undergoing processes are using the CPU over 
 #### 4. Check the number of active connections to the system
 
 ```
-Connection=$(ss -s)               #Listing active TCP connections to system 
+Connection=$(ss -l)               #Listing all listening connections to system 
 echo "Active connections to the system are: $Connection"
 ```
-The "show socket" or ss command displays the active TCP, UDP, RAW, . connections or sockets on the linux system. It is an alternative to netstat. It shows mainly 4 parts:
+The "show socket" or ss command displays the active TCP, UDP, RAW, INET, FRAG etc. connections or sockets on the linux system. It is an alternative to netstat. It shows mainly 4 parts:
 
-- Established: Number of connections established
-- Closed:
-- Orphaned:
-- Timewait:
+- Established: Number of connections established.
+- Closed: Connection which were ended or closed.
+- Orphaned: Means socket no longer is attached to any socket descriptor in any of teh user's process. 
+- Timewait: Keeps the sockets open for 60 seconds as buffer time in linux after the application has shutdown the sockets in order to ensure all the data has been transmitted between client and server.
+
+
+#### 5. Check the system's temperature
+
+```
+Temp=$(sensors)             #Listing the temperature of the system
+echo "Temperature of the system is: $Temp"
+
+```
