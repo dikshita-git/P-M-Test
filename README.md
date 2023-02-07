@@ -115,3 +115,44 @@ log.out.3  <- 2MB
 (old 3 is removed)
 
 whole purpose: logs shall not become too big
+
+
+
+# create systemd timer and service unit
+# it is the modern way to configure cron jobs
+
+# create new systemd unit files
+# maintenance.service will execute the test.sh script, which is expected to exist in /home/vagrant
+# the timer unit will execute the maintenance.service unit
+cat  <<EOF >maintenance.service
+[Unit]
+Description=Do system maintenance tasks
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/vagrant
+ExecStart=/bin/bash /home/vagrant/test.sh
+EOF
+
+cat  <<EOF >maintenance.timer
+[Unit]
+Description=timer for system maintenance tasks
+
+[Timer]
+OnCalendar=*-*-* 22:00:00
+Persistent=true
+Unit=maintenance.service
+
+[Install]
+WantedBy=timers.target
+EOF
+
+# copy the new unit files to the appropriate location so that systemd can find them
+sudo cp maintenance.timer maintenance.service /etc/systemd/system
+  
+# load the new unit files into systemd
+systemctl daemon-reload
+# start the timer on boot
+systemctl enable maintenance.timer
+# start the timer now
+systemctl start maintenance.timer
