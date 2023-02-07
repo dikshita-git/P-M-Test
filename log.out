@@ -1,0 +1,88 @@
+The disk space in system is: Filesystem      1K-blocks      Used  Available Use% Mounted on
+dev               8062344         0    8062344   0% /dev
+run               8073508      1756    8071752   1% /run
+/dev/nvme0n1p3  419430400 105637432  313431416  26% /
+tmpfs             8073508    123200    7950308   2% /dev/shm
+/dev/nvme0n1p3  419430400 105637432  313431416  26% /home
+/dev/nvme0n1p3  419430400 105637432  313431416  26% /var/cache
+/dev/nvme0n1p3  419430400 105637432  313431416  26% /var/log
+tmpfs             8073512     28924    8044588   1% /tmp
+/dev/nvme0n1p1    1046512    103064     943448  10% /boot/efi
+tmpfs             1614700       172    1614528   1% /run/user/1000
+total          1712665684 422806844 1288412632  25% -
+The system uptime and its load average is:  20:24:16 up 10:33,  1 user,  load average: 0,46, 0,50, 0,91
+Active connections to the system are: Total: 1003
+TCP:   14 (estab 14, closed 0, orphaned 0, timewait 0)
+
+Transport Total     IP        IPv6
+RAW	  1         0         1        
+UDP	  8         4         4        
+TCP	  14        5         9        
+INET	  23        9         14       
+FRAG	  0         0         0        
+Temperature of the system is: dell_smm-isa-0000
+Adapter: ISA adapter
+fan1:           0 RPM  (min =    0 RPM, max = 4900 RPM)
+temp1:        +58.0°C  
+temp2:        +41.0°C  
+temp3:        +43.0°C  
+
+BAT0-acpi-0
+Adapter: ACPI interface
+in0:          12.70 V  
+curr1:       1000.00 uA 
+
+coretemp-isa-0000
+Adapter: ISA adapter
+Package id 0:  +59.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 0:        +56.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 1:        +59.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 2:        +58.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 3:        +58.0°C  (high = +100.0°C, crit = +100.0°C)
+
+nvme-pci-0300
+Adapter: PCI adapter
+Composite:    +36.9°C  (low  = -273.1°C, high = +76.8°C)
+                       (crit = +78.8°C)
+Sensor 1:     +36.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+acpitz-acpi-0
+Adapter: ACPI interface
+temp1:        +27.8°C  (crit = +119.0°C)
+IP address and network interface of system: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp1s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
+    link/ether 98:e7:43:03:e4:2c brd ff:ff:ff:ff:ff:ff
+3: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether ac:d5:64:57:b4:33 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.0.6/24 brd 192.168.0.255 scope global dynamic noprefixroute wlan0
+       valid_lft 3416sec preferred_lft 3416sec
+    inet6 2a0a:a543:df16:0:1bb7:2111:175d:40b3/64 scope global dynamic noprefixroute 
+       valid_lft 3600sec preferred_lft 3600sec
+    inet6 fe80::4f5d:cfbc:12fb:c18d/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+4: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:6a:0f:42:05 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+5: br-d4f7f0f89d68: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:59:ed:35:60 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.49.1/24 brd 192.168.49.255 scope global br-d4f7f0f89d68
+       valid_lft forever preferred_lft forever
+The hostname is:  Static hostname: DK
+       Icon name: computer-laptop
+         Chassis: laptop 💻
+      Machine ID: edacdc7207644e548d17f423a169ffd2
+         Boot ID: fa43595e181648838948b0cf8554f93f
+Operating System: EndeavourOS
+          Kernel: Linux 6.1.9-arch1-1
+    Architecture: x86-64
+ Hardware Vendor: Dell Inc.
+  Hardware Model: Inspiron 3593
+Firmware Version: 1.24.0
+test.sh: line 30: 0: command not found
