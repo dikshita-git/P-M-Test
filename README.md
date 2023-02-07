@@ -82,7 +82,7 @@ It lists the system's CPU tempertaure:
 #### 6. Check the system's IP address
 
 ```
-IP_address=$(ip -4 -o a | cut -d '' -f 2,7 | cut -d '/' -f 1)      #Showing IP address of system including network interfaces and IPV4 on the system
+IP_address=$(ip a)      #Showing IP address of system including network interfaces and IPV4 on the system
 echo "IP address and network interface of system: $IP_address"
 
 ```
@@ -90,7 +90,7 @@ echo "IP address and network interface of system: $IP_address"
 #### 7. Check the system's hostname
 
 ```
-IP_address=$(ip -4 -o a | cut -d '' -f 2,7 | cut -d '/' -f 1)      #Showing IP address of system including network interfaces and IPV4 on the system
-echo "IP address and network interface of system: $IP_address"
+Hostname=$(hostnamectl)         #Displaying hostname of system
+echo "The hostname is: $Hostname"
 
 ```
