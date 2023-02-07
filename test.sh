@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-exec >log.out 2>&1   #Display all teh results of teh scripts below in a log.out file
+exec >log.out 2>&1   #Display all the results of the scripts below in a log.out file
 
  
 Diskspace=$(df --total)    #Display disk space
