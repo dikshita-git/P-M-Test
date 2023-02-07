@@ -86,3 +86,11 @@ IP_address=$(ip -4 -o a | cut -d '' -f 2,7 | cut -d '/' -f 1)      #Showing IP a
 echo "IP address and network interface of system: $IP_address"
 
 ```
+
+#### 7. Check the system's hostname
+
+```
+IP_address=$(ip -4 -o a | cut -d '' -f 2,7 | cut -d '/' -f 1)      #Showing IP address of system including network interfaces and IPV4 on the system
+echo "IP address and network interface of system: $IP_address"
+
+```
