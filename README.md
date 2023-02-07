@@ -51,3 +51,14 @@ These help us to understand how the undergoing processes are using the CPU over 
 
 
 #### 4. Check the number of active connections to the system
+
+```
+Connection=$(ss -s)               #Listing active TCP connections to system 
+echo "Active connections to the system are: $Connection"
+```
+The "show socket" or ss command displays the active TCP, UDP, RAW, . connections or sockets on the linux system. It is an alternative to netstat. It shows mainly 4 parts:
+
+- Established: Number of connections established
+- Closed:
+- Orphaned:
+- Timewait:
