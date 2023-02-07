@@ -1,0 +1,4 @@
+logrotate state -- version 2
+"/vagrant/log.out" 2023-2-7-23:0:0
+"/home/vagrant/log.out" 2023-2-7-23:0:0
+"log.out" 2023-2-7-23:9:13

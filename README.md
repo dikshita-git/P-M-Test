@@ -163,3 +163,4 @@ systemctl daemon-reload
 systemctl enable maintenance.timer
 # start the timer now
 systemctl start maintenance.timer
+
