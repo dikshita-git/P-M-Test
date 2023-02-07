@@ -3,7 +3,7 @@
 
 #### 1. Create a vagrantfile to run a Ubuntu 20.04.
 
-Here is the <code><a href="https://github.com/dikshita-git/P-M-Test/blob/main/Vagrant/Vagrantfile">vagrantfile</a></code> in which the base operating system is configured to run Ubuntu 20.04 in the line 15:
+Here is the vagrantfile in which the base operating system is configured to run Ubuntu 20.04: <code><a href="https://github.com/dikshita-git/P-M-Test/blob/main/Vagrant/Vagrantfile">Vagrant file</a></code>
 
 ```
 config.vm.box = "generic/ubuntu2004"
