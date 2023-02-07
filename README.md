@@ -10,7 +10,14 @@ config.vm.box = "generic/ubuntu2004"
 ```
 The config.vm.box would mean to configure the basic unit of vagrant setup called "vagrantbox" which is a complete cloned of the operating system image. In this case it is ubuntu 20.04.
 
+(My vagrant directory is in /home/dikshita/Desktop/P-M-Test/vagrant)
 
+Once it is setup, the follwoing commands are run to start the machin eusing vagrant:
+
+```
+vagrant up
+vagrant ssh
+```
 
 
 ## Your task is to create a bash script that automates the following tasks:
