@@ -32,6 +32,7 @@ This command means display free+used disk space in the linux system.With the fla
 In general:
 
 ***Uptime***: It is used to show for how long the system is up followed by the number of active users
+
 ***Load average***: Depicts average load on a CPU of the system.
 
 
