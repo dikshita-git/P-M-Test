@@ -37,8 +37,8 @@ This command means display free+used disk space in the linux system.With the fla
 ```
 echo "# The number of active connections to the system are:"
 ss -s       #Listing active connections to system 
-
 ```
+
 The "show socket" or ss command displays the active TCP, UDP, RAW, INET, FRAG etc. connections or sockets on the linux system. It is an alternative to netstat. It shows mainly 4 parts:
 
 - ***Established:*** Number of connections established.
@@ -50,9 +50,10 @@ The "show socket" or ss command displays the active TCP, UDP, RAW, INET, FRAG et
 
 #### 4. Check the number of running processes
 
+```
 echo "# Check the number of running processes"
 ps -ef --no-headers | wc -l
-
+```
 
 
 #### 5. Check the system's uptime and load average
