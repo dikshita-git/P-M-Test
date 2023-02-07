@@ -12,7 +12,7 @@ Uptime=$(uptime)    #Display uptime and load average of system
 echo "The system uptime and its load average is: $Uptime"
 
 
-Connection=$(ss -a)               #Listing active TCP connections to system 
+Connection=$(ss -l)               #Listing active TCP connections to system 
 echo "Active connections to the system are: $Connection"
 
 Temp=$(sensors)             #Listing the temperature of the system
