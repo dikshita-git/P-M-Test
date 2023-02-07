@@ -94,3 +94,24 @@ Hostname=$(hostnamectl)         #Displaying hostname of system
 echo "The hostname is: $Hostname"
 
 ```
+
+
+#### 8. Log should be rotated
+
+lets say logrotate works daily
+
+mext daily execution:
+before:
+log.out <- 100kbit
+log.out.1 <- 1MB
+log.out.2 <- 2MB
+log.out.3  <- 3MB
+
+after:
+log.out <- 0
+log.out.1 <- 100kbit
+log.out.2 <- 1MB
+log.out.3  <- 2MB
+(old 3 is removed)
+
+whole purpose: logs shall not become too big
