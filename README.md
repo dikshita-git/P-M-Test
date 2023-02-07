@@ -72,9 +72,9 @@ uptime     #Display uptime and load average of system
 By using the "uptime" command, we see (from left to right):
 
 The system is up for 20:07:20 up  1:25 and for 1 user with the load averages:
-- 0,02: It is the average load on the CPU of system for the last minute.
-- 0,15: It is the average load on the CPU of system for the last 5-minutes interval time.
-- 0,43: It is the 15-minutes average load on the CPU of system.
+- 0.00: It is the average load on the CPU of system for the last minute.
+- 0.01: It is the average load on the CPU of system for the last 5-minutes interval time.
+- 0.00: It is the 15-minutes average load on the CPU of system.
 
 These help us to understand how the undergoing processes are using the CPU over the time.
 
