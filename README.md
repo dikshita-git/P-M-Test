@@ -20,3 +20,16 @@ Here is the <code><a href="https://github.com/dikshita-git/P-M-Test/blob/main/te
 
 #### 2. Check the free disk space of the system
 
+```
+Diskspace=$(df --total)    #Display disk space
+echo -e "The disk space in system is: $Diskspace"
+```
+This command means display free+used disk space in the linux system.With the flag --total, it displays name of filesystem, free, used etc. 
+
+
+#### 3. Check the system's uptime
+
+```
+Uptime=$(uptime)    #Display uptime and load average of system
+echo "The system uptime and its load average is: $Uptime"
+```
