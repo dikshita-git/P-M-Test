@@ -30,13 +30,15 @@ The end of this README.md file contains explanation of the used commands.
 
 #### 4. create systemd timer and service unit at /home/vagrant
 
-# The script should be executed every day at a specific time (e.g. 10pm)
-# to achieve this functionality we create a systemd timer and service unit
-# it is the modern way to configure cron jobs
+- The script should be executed every day at a specific time (e.g. 10pm)
+- to achieve this functionality we create a systemd timer and service unit
+- it is the modern way to configure cron jobs
 
-#create new systemd unit files
-#maintenance.service will execute the test.sh script, which is expected to exist in /home/vagrant
-#the timer unit will execute the maintenance.service unit
+##### create new systemd unit files
+
+- maintenance.service will execute the test.sh script, which is expected to exist in /home/vagrant
+- the timer unit will execute the maintenance.service unit
+```
 cat  <<EOF >maintenance.service
 [Unit]
 Description=Do system maintenance tasks
@@ -46,7 +48,8 @@ Type=oneshot
 WorkingDirectory=/home/vagrant
 ExecStart=/bin/bash /home/vagrant/test.sh
 EOF
-
+```
+```
 cat  <<EOF >maintenance.timer
 [Unit]
 Description=timer for system maintenance tasks
@@ -59,20 +62,27 @@ Unit=maintenance.service
 [Install]
 WantedBy=timers.target
 EOF
+```
 
 #### 5. Move the new unit files to the appropriate location so that systemd can find them
+
+```
 sudo mv maintenance.timer maintenance.service /etc/systemd/system
+```
 
 #### 6. load the new unit files into systemd
+
+
 ```
 sudo systemctl daemon-reload
 ```
 
 #### 7. Start and enable the timer
-# both the service and timer can be started and enabled
-# the timer only starts the service
-# it is sufficient to start and enable the timer, so that the service is started at 10 pm
-# enabling the service would mean starting it on boot
+
+- both the service and timer can be started and enabled
+- the timer only starts the service
+- it is sufficient to start and enable the timer, so that the service is started at 10 pm
+- enabling the service would mean starting it on boot
 
 ```
 sudo systemctl enable maintenance.timer
@@ -82,20 +92,23 @@ sudo systemctl enable maintenance.timer
 sudo systemctl start maintenance.timer
 ```
 
-Show the resulting timer:
+##### Show the resulting timer:
+
 ```
 systemctl list-timers
 ```
 
 #### 8. testing functionality of the maintenance.service
 
-# Open terminals with the logs of the service and timer unit
+- Open terminals with the logs of the service and timer unit
+
 ```
 sudo journalctl -fu maintenance.service
 sudo journalctl -fu maintenance.timer
 ```
 
-# test the service unit
+- test the service unit
+
 ```
 sudo systemctl start maintenance.service
 ```
@@ -104,7 +117,8 @@ It will show an error on first execution, which is expected. The log.out can't b
 
 ------------------------------------------------
 
-# Description of the commands used in the test.sh script
+### Description of the commands used in the test.sh script
+
 
 #### Check the free disk space of the system
 ```
