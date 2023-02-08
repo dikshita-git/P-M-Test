@@ -217,21 +217,29 @@ A statefile is also created which will show logroate the last time the rotation 
 
 A Sample rotation will work as follows:
 
-- Next daily execution:
+Next daily execution:
 
 ***before:***
 
    log.out <- 100kbit
+   
    log.out.1 <- 1MB
+   
    log.out.2 <- 2MB
+   
    log.out.3  <- 3MB
+   
 
 ***after:***
 
    log.out <- 0
+   
    log.out.1 <- 100kbit
+   
    log.out.2 <- 1MB
+   
    log.out.3  <- 2MB
+   
 (old 3 is removed)
 
 :bulb: Whole purpose: logs shall not become too big
