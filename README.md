@@ -63,19 +63,6 @@ Unit=maintenance.service
 WantedBy=timers.target
 EOF
 ```
-Below are the screenshots of the output of timer of vm, log of service unit and log of timer unit respectively:
-
-<img src="https://github.com/dikshita-git/P-M-Test/blob/main/screenshots/timers_of_vm.png">
-<p align="center">Timers of VM</p>
-
-
-<img src="https://github.com/dikshita-git/P-M-Test/blob/main/screenshots/log_og_service_unit.png">
-<p align="center">Log of service unit</p>
-
-<img src="https://github.com/dikshita-git/P-M-Test/blob/main/screenshots/log_of_timer_unit.png">
-<p align="center">Log of timer unit</p>
-
-
 
 #### 5. Move the new unit files to the appropriate location so that systemd can find them
 
@@ -120,12 +107,30 @@ sudo journalctl -fu maintenance.service
 sudo journalctl -fu maintenance.timer
 ```
 
+Below are the screenshots of the output of timer of vm, log of service unit and log of timer unit respectively:
+
+<img src="https://github.com/dikshita-git/P-M-Test/blob/main/screenshots/timers_of_vm.png">
+<p align="center">Timers of VM</p>
+
+
+<img src="https://github.com/dikshita-git/P-M-Test/blob/main/screenshots/log_og_service_unit.png">
+<p align="center">Log of service unit</p>
+
+<img src="https://github.com/dikshita-git/P-M-Test/blob/main/screenshots/log_of_timer_unit.png">
+<p align="center">Log of timer unit</p>
+
+
 - test the service unit
 
 ```
 sudo systemctl start maintenance.service
 ```
+
 It will show an error on first execution, which is expected. The log.out can't be rotated if it doesn't yet exist.
+
+<img src="https://github.com/dikshita-git/P-M-Test/blob/main/screenshots/vagrant_home_after_two_executions.png">
+<p align="center">Vagrant home-folder after two executions</p>
+
 
 
 ------------------------------------------------
