@@ -27,7 +27,6 @@ A statefile is also present which will show us the last time the bash script was
 
 
 
-
 #### 2. Check the free disk space of the system
 
 ```
@@ -59,6 +58,7 @@ The "show socket" or ss command displays the active TCP, UDP, RAW, INET, FRAG et
 echo "# Check the number of running processes"
 ps -ef --no-headers | wc -l
 ```
+It lists the running processes and since its a huge output so for convenience with no headers and making a word count to help us see the number oflines.
 
 
 #### 5. Check the system's uptime and load average
@@ -89,8 +89,8 @@ These help us to understand how the undergoing processes are using the CPU over 
 ```
 echo "# Check the system's memory usage:"
 free -h
-
 ```
+To display free memory, free command is used. For human ease the flag --h is used to shorten the output to shortest 3 digits with units of memory.
 
 
 #### 7. Check the system's temperature
