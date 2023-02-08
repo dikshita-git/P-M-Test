@@ -1,10 +1,11 @@
-# Documentation of the task to create a script to automate system maintenance tasks"
+# Documentation of the task to create a script to automate system maintenance tasks
 
 
-#### 1. Create a vagrantfile to run a Ubuntu 20.04.
+#### 1. Create a vagrantfile to run an Ubuntu 20.04 VM.
 
 Here is the vagrantfile in which the base operating system is configured to run Ubuntu 20.04: <code><a href="https://github.com/dikshita-git/P-M-Test/blob/main/Vagrantfile">Vagrant file</a></code>
 
+The most importan part is the definition of the box, which is used as base image:
 ```
 config.vm.box = "generic/ubuntu2004"
 ```
