@@ -63,6 +63,10 @@ Unit=maintenance.service
 WantedBy=timers.target
 EOF
 ```
+Below are the screenshots of the output of timer of vm:
+
+<img src="https://github.com/dikshita-git/P-M-Test/blob/main/screenshots/timers_of_vm.png">
+<p align="center">Timers of VM</p>
 
 #### 5. Move the new unit files to the appropriate location so that systemd can find them
 
