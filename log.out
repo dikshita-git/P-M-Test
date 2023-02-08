@@ -1,37 +1,67 @@
 # The disk space in system is: 
-Filesystem     1K-blocks    Used Available Use% Mounted on
-udev              482784       0    482784   0% /dev
-tmpfs             100012     964     99048   1% /run
-/dev/sda1       40581564 1487632  39077548   4% /
-tmpfs             500052       0    500052   0% /dev/shm
-tmpfs               5120       0      5120   0% /run/lock
-tmpfs             500052       0    500052   0% /sys/fs/cgroup
-/dev/loop1         64896   64896         0 100% /snap/core20/1778
-/dev/loop0         94080   94080         0 100% /snap/lxd/24061
-/dev/loop2         51072   51072         0 100% /snap/snapd/17950
-tmpfs             100008       0    100008   0% /run/user/1000
-total           42479640 1698644  40764612   5% -
+Filesystem      1K-blocks      Used  Available Use% Mounted on
+dev               8062344         0    8062344   0% /dev
+run               8073540      1756    8071784   1% /run
+/dev/nvme0n1p3  419430400 106780244  312292572  26% /
+tmpfs             8073540     88164    7985376   2% /dev/shm
+/dev/nvme0n1p3  419430400 106780244  312292572  26% /home
+/dev/nvme0n1p3  419430400 106780244  312292572  26% /var/cache
+/dev/nvme0n1p3  419430400 106780244  312292572  26% /var/log
+tmpfs             8073540     23952    8049588   1% /tmp
+/dev/nvme0n1p1    1046512    103064     943448  10% /boot/efi
+tmpfs             1614708       192    1614516   1% /run/user/1000
+total          1712665784 427338104 1283897344  25% -
 # The number of active connections to the system are:
-Total: 150
-TCP:   4 (estab 1, closed 0, orphaned 0, timewait 0)
+Total: 1101
+TCP:   21 (estab 12, closed 3, orphaned 0, timewait 3)
 
 Transport Total     IP        IPv6
-RAW	  1         0         1        
-UDP	  2         2         0        
-TCP	  4         3         1        
-INET	  7         5         2        
+RAW	  2         1         1        
+UDP	  32        17        15       
+TCP	  18        12        6        
+INET	  52        30        22       
 FRAG	  0         0         0        
 
 # Check the number of running processes
-107
+325
 # The system uptime and loadavg are:
- 23:09:13 up  2:21,  1 user,  load average: 0.00, 0.01, 0.00
+ 13:20:14 up  2:43,  1 user,  load average: 0,53, 0,63, 0,64
 # Check the system's memory usage:
-              total        used        free      shared  buff/cache   available
-Mem:          976Mi       156Mi       418Mi       0.0Ki       400Mi       680Mi
-Swap:            0B          0B          0B
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       4,5Gi       5,5Gi       678Mi       5,5Gi         9Gi
+Swap:             0B          0B          0B
 # Temperature of the system is:
-test.sh: line 37: sensors: command not found
+dell_smm-isa-0000
+Adapter: ISA adapter
+fan1:        2649 RPM  (min =    0 RPM, max = 4900 RPM)
+temp1:        +56.0°C  
+temp2:        +41.0°C  
+temp3:        +42.0°C  
+
+BAT0-acpi-0
+Adapter: ACPI interface
+in0:          12.85 V  
+curr1:       1000.00 uA 
+
+coretemp-isa-0000
+Adapter: ISA adapter
+Package id 0:  +70.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 0:        +66.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 1:        +67.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 2:        +67.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 3:        +70.0°C  (high = +100.0°C, crit = +100.0°C)
+
+nvme-pci-0300
+Adapter: PCI adapter
+Composite:    +34.9°C  (low  = -273.1°C, high = +76.8°C)
+                       (crit = +78.8°C)
+Sensor 1:     +34.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+acpitz-acpi-0
+Adapter: ACPI interface
+temp1:        +27.8°C  (crit = +119.0°C)
+
 # IP address and network interface of system:
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
@@ -39,11 +69,23 @@ test.sh: line 37: sensors: command not found
        valid_lft forever preferred_lft forever
     inet6 ::1/128 scope host 
        valid_lft forever preferred_lft forever
-2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
-    link/ether 02:cd:d3:62:c3:87 brd ff:ff:ff:ff:ff:ff
-    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic enp0s3
-       valid_lft 77942sec preferred_lft 77942sec
-    inet6 fe80::cd:d3ff:fe62:c387/64 scope link 
+2: enp1s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
+    link/ether 98:e7:43:03:e4:2c brd ff:ff:ff:ff:ff:ff
+3: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether ac:d5:64:57:b4:33 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.0.6/24 brd 192.168.0.255 scope global dynamic noprefixroute wlan0
+       valid_lft 2858sec preferred_lft 2858sec
+    inet6 2a0a:a543:df16:0:1bb7:2111:175d:40b3/64 scope global dynamic noprefixroute 
+       valid_lft 3600sec preferred_lft 3600sec
+    inet6 fe80::4f5d:cfbc:12fb:c18d/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+4: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:62:4f:4e:8c brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+5: br-d4f7f0f89d68: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:cd:c0:79:4b brd ff:ff:ff:ff:ff:ff
+    inet 192.168.49.1/24 brd 192.168.49.255 scope global br-d4f7f0f89d68
        valid_lft forever preferred_lft forever
 The hostname is: 
-ubuntu-focal
+DK
