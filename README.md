@@ -21,6 +21,11 @@ vagrant ssh
 ## Your task is to create a bash script that automates the following tasks:
 
 Here is the <code><a href="https://github.com/dikshita-git/P-M-Test/blob/main/test.sh">bash script</a></code> with the codes and below is an explanation of the same. Further the logs of code executions are tracked in <code><a href="https://github.com/dikshita-git/P-M-Test/blob/main/log.out">logfile</a></code>
+The logfile name is log.out and is compressed and rotated for 3 times.
+
+A statefile is also present which will show us the last time the bash script was run.
+
+
 
 
 #### 2. Check the free disk space of the system
