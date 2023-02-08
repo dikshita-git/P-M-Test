@@ -1,4 +1,4 @@
-# Documentation of "Task: Create a script to automate system maintenance tasks"
+# Documentation of the task to create a script to automate system maintenance tasks"
 
 
 #### 1. Create a vagrantfile to run a Ubuntu 20.04.
